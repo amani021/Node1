@@ -17,6 +17,8 @@ mongoose.connect("mongodb+srv://amani-ahmad:0912amani@cluster0.rcinyw5.mongodb.n
 
 app.use("/api/auth", authRoutes);
 
-app.listen(5000, () => {
+const port = 5000 || process.env.PORT;
+
+app.listen(port, () => {
     console.log("✅ Backend running on http://localhost:5000");
 });
